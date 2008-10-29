@@ -1,0 +1,88 @@
+[LOOPS]
+ISA
+GS
+ST-H
+BCT-H
+N1-H
+LIN-D
+CTT-S
+SE-S
+GE
+IEA
+
+[ISA]
+segment=ISA:::ISA:R:1
+
+[GS]
+segment=GS:::GE:R:1
+
+[ST-H]
+segment=ST:1:832:Transaction set header:R:1
+
+[BCT-H]
+segment=BCT:1:PC:Beginning segment for price sales catalog:R:1
+
+[N1-H]
+segment=N1:1:VN:Name:S:1
+loop=REF-H
+
+[REF-H]
+segment=REF:::Reference identification:S:1
+
+[N1-H]
+segment=N1:::Name:S:1
+
+[LIN-D]
+segment=LIN:2:VN:Item identification:S:1
+loop=G53-D
+loop=REF-D
+loop=YNQ-D
+loop=PID-D
+loop=MEA-D
+loop=PKG-D
+loop=CTP-D
+loop=SLN-D
+
+[G53-D]
+segment=G53:1:001,002,003,CEP,PRI:Maitenance type:S:1
+
+[REF-D]
+segment=REF:1:BD,MR,SU,XX,S6:Reference identification:S:1
+
+[YNQ-D]
+segment=YNQ:1:IO:Yes no question:S:1
+
+[PID-D]
+segment=PID:::Product item description:S:1
+
+[MEA-D]
+segment=MEA:1:WT,PS,SD:Measurements:S:1
+
+[PKG-D]
+segment=PKG:::Marketing packaging loading:S:1
+
+[CTP-D]
+segment=CTP:1:IN:Pricing information:S:1
+loop=DTM-D
+
+[DTM-D]
+segment=DTM:1:007:Date time reference:S:1
+
+[SLN-D]
+segment=SLN:::Subline item detail:S:1
+loop=MTX-D
+
+[MTX-D]
+segment=MTX:::Text:S:1
+
+[CTT-S]
+segment=CTT:::Transaction Totals:S:1
+
+[SE-S]
+segment=SE:::Transaction set trailer:S:1
+
+[GE]
+segment=GE:::GE:R:1
+
+[IEA]
+segment=IEA:::IEA:R:1

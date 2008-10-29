@@ -1,0 +1,100 @@
+[LOOPS]
+ISA
+GS
+ST-H
+BIG-H
+N1-H
+ITD-H
+IT1-D
+TDS-S
+TXI-S
+SAC-S
+CTT-S
+SE-S
+GE
+IEA
+
+#--- start of loop details ---#
+
+[ISA]
+segment=ISA:::ISA:R:1
+
+[GS]
+segment=GS:::GE:R:1
+
+[ST-H]
+segment=ST:1:810:Transaction Set Header:R:1
+
+[BIG-H]
+segment=BIG:7:DI,PR:Credit Invoice:R:1
+
+[N1-H]
+segment=N1:1:BS,BT,RE,RI,SD,SF,ST,VN:Ship To:S:1
+loop=N1_LOOP-H
+loop=REF_LOOP-H
+
+[N1_LOOP-H]
+segment=N3:::Address Information:S:1
+segment=N4:::Geographic Location:S:1
+
+[REF_LOOP-H]
+segment=REF:::Reference Identification:S:1
+
+[ITD-H]
+segment=ITD:1:03:Terms of Sale:S:1
+
+[IT1-D]
+segment=IT1:::Baseline Item Data:S:1
+loop=QTY_LOOP-D
+loop=TXI_LOOP-D
+loop=CTP_LOOP-D
+loop=MEA_LOOP-D
+loop=PID_LOOP-D
+loop=PKG_LOOP-D
+loop=PO4_LOOP-D
+loop=REF_LOOP-D
+
+[QTY_LOOP-D]
+segment=QTY:::Quantity:S:1
+
+[TXI_LOOP-D]
+segment=TXI:::Taxes:S:1
+
+[CTP_LOOP-D]
+segment=CTP:::Pricing information:S:1
+
+[MEA_LOOP-D]
+segment=MEA:::Measurements:S:1
+
+[PID_LOOP-D]
+segment=PID:::Free Form Product/Item/Description:S:1
+
+[PKG_LOOP-D]
+segment=PKG:::Packaging:S:1
+
+[PO4_LOOP-D]
+segment=PO4:::Item physical details:S:1
+
+[REF_LOOP-D]
+segment=REF:::Reference:S:1
+
+[TDS-S]
+segment=TDS:::Monetary Value Summary:S:1
+
+[TXI-S]
+segment=TXI:1:LS:Tax Information:S:1
+
+[SAC-S]
+segment=SAC:1:C:Service,Promotion,Allowance, or Charge:S:1
+
+[CTT-S]
+segment=CTT:::Transaction Totals:S:1
+
+[SE-S]
+segment=SE:::Transaction Set Trailer:R:1
+
+[GE]
+segment=GE:::GE:R:1
+
+[IEA]
+segment=IEA:::IEA:R:1

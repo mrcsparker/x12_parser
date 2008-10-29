@@ -1,0 +1,60 @@
+[LOOPS]
+ISA
+GS
+ST-H
+BAK-H
+DTM-H
+N1-H
+PO1-D
+CTT-S
+SE-S
+GE
+IEA
+
+[ISA]
+segment=ISA:::ISA:R:1
+
+[GS]
+segment=GS:::GE:R:1
+
+[ST-H]
+segment=ST:1:855:R:1
+
+[BAK-H]
+segment=BAK:1:00,04:R:1
+
+[DTM-H]
+segment=DTM:::Date Time Reference
+
+[N1-H]
+segment=N1:1:ST:O:1
+segment=N3:::Address Information:S:1
+segment=N4:::Geographic Location:S:1
+
+[PO1-D]
+segment=PO1:::Purchase Order Ack:S:1
+loop=PID-D
+loop=ACK-D
+loop=N1-D
+
+[PID-D]
+segment=PID:::Product Item Description:S:1
+
+[ACK-D]
+segment=ACK:1:IA,IC,ID,IR:Line item ack:S:1
+
+[N1-D]
+segment=N1:1:QC:Name:S:1
+
+[CTT-S]
+segment=CTT:::Transaction Totals:S:1
+
+[SE-S]
+segment=SE:::Transaction Set Trailer:R:1
+
+[GE]
+segment=GE:::GE:R:1
+
+[IEA]
+segment=IEA:::IEA:R:1
+

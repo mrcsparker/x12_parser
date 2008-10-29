@@ -1,0 +1,31 @@
+== Ruby EDI X12 Parser
+
+== General Information
+
+This is a direct port of Prasad Poruporuthan's X12::Parser Perl
+library for Ruby.  Being the very first version, and pretty much
+a direct translation, it has more Perlisms than Rubyisms.
+
+There is no real documentation right now, or unit tests.  If you need
+to use the library, the best resource is:
+
+http://search.cpan.org/~prasad/X12/Readme.pod
+
+It works pretty much the same way right now.
+
+== How you can help
+Read the TODO document.  There are some things that this library could use, but
+I am not going to implements any time soon:
+* to_xml output
+* to_yaml output
+* anything else that you can think of.
+I am not looking to map 100% of any of the X12 specifications.  
+
+Also, I don't have access to the full ANSI X12 documents.
+
+== License
+GNU LGPL, http://www.gnu.org/copyleft/lesser.html
+
+== Credits
+This code is pretty much directly translated from Prasad Poruporuthan's X12::Parser Perl
+library.  The Perl library project is located at http://search.cpan.org/~prasad/X12/

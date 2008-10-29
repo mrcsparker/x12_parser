@@ -1,0 +1,4 @@
+* Create unit tests
+* Use YAML rather than the current configuration file format.
+* Have the parser understand Header, Detail, and Summary sections of the EDI document.
+* Create a to_csv method that flattens out the EDI X12 data.
