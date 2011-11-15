@@ -1,6 +1,6 @@
 require 'x12'
 
-Dir["/opt/adelpo/data/edi/*"].each do |d|
+Dir[EDI_PATH].each do |d|
 
   parser = X12::Parser.new
   edi_type = parser.get_edi_type(d)
