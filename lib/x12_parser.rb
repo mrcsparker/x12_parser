@@ -2,6 +2,9 @@
 #
 # Copyright (C) 2008 Chris Parker
 # All rights reserved
+# Copyright (C) 2010 Andrew McElroy
+# All changes not Chris Parker are MIT/LGPL dual licensed.
+# Granted 99% of the code at this stage is Chris Parker's code.
 #
 # Based on Perl X12::Parser by
 # Prasad Poruporuthan

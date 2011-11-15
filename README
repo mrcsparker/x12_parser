@@ -1,5 +1,14 @@
 == Ruby EDI X12 Parser
 
+== Usage
+When you include this library be sure to set EDI_PATH otherwise
+expect failures.
+EDI_PATH is where your EDI files are located.
+If the demand exist, I might make this dependent on Fog so that
+EDIs can sit in a s3 bucket or rackspace storage.
+
+More changes are pending.
+
 == General Information
 
 This is a direct port of Prasad Poruporuthan's X12::Parser Perl
